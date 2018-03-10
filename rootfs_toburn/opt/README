@@ -1,0 +1,37 @@
+Hello!
+
+List of files
+=============
+
+decrypt  		util for check 1024 bytes enc file
+
+encrypt_ar030  		
+encrypt_imx122  	
+encrypt_imx122_fm  	utils for generating 1024 bytes enc files
+encrypt_imx122_new  	USAGE: encrypt_* XX:XX:XX:XX:XX:XX
+encrypt_imx278_fm  	util will generate .enc file in current dir
+
+generate_task.sh  	example for auto generating encryption tasks
+
+mount_usb.sh  		mount usb flash
+umount_usb.sh		umount usb flash
+
+How to generate MAC
+===================
+
+I. Prepare FAT32 USB FLASH
+	1. Put file generate_task.sh
+	2. Edit generate_task.sh:
+		choose which encryption tool to use
+		edit first 4 bytes for MAC
+		
+II. Start camera module and connect via USB-Serial adapter (115200 speed)
+	1. run `/opt/mount_usb.sh`
+	2. run `cd /mnt`
+	3. run `./generate_task.sh > ./do.sh`
+	4. run `sh ./do.sh`
+	5. Wait...
+	6. run `cd /`
+	7. run `/opt/umount_usb.sh`
+
+III. Unplug power, take off usb flash

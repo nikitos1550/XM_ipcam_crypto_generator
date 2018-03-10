@@ -1,0 +1,4 @@
+/dev/root       /               ext2    rw,noauto       0       1
+proc		/proc		proc	defaults	0	0
+sysfs		/sys		sysfs	defaults	0	0
+tmpfs		/dev		tmpfs	defaults	0	0
