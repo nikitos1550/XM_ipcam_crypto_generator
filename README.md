@@ -1,7 +1,7 @@
 # XM_ipcam_crypto_generator
 Generator of crypto data for XM ip cameras
 
-Sometimes crypto data is stored in additional 1024 i2c eeprom chip (called FM chip), sometimes in main spi memory chip with offset 0x1fc00.
+Sometimes crypto data is stored in additional 1024k i2c eeprom chip (called FM chip), sometimes in main spi memory chip with offset 0x1fc00.
 
 Crypto data contains MAC address and device info
 
